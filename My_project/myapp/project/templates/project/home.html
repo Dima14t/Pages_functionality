@@ -1,0 +1,14 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+<h1>Добро пожаловать!</h1>
+<p>Это учебный проект на Django.</p>
+
+<h2>Последние новости:</h2>
+<ul>
+{% for news in latest_news %}
+  <li><a href="{% url 'news_detail' news.id %}">{{ news.title }}</a></li>
+{% empty %}
+  <li>Нет новостей.</li>
+{% endfor %}
+</ul>
+{% endblock %}

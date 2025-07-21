@@ -1,0 +1,9 @@
+{% extends "myapp/base.html" %}
+{% block content %}
+<h1>{{ news.title }}</h1>
+<p>{{ news.content }}</p>
+<p><em>{{ news.date }}</em></p>
+
+<a href="{% url 'news' %}">К списку новостей</a>
+
+{% endblock %}

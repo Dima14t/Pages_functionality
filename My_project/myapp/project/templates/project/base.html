@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<title>Учебный сайт</title>
+</head>
+<body>
+<header>
+<nav>
+  <a href="{% url 'home' %}">Главная</a> |
+  <a href="{% url 'about' %}">О проекте</a> |
+  <a href="{% url 'contacts' %}">Контакты</a> |
+  <a href="{% url 'news' %}">Новости</a> |
+  <a href="{% url 'help' %}">Помощь</a>
+</nav>
+<hr>
+</header>
+
+<main>
+{% block content %}
+{% endblock %}
+</main>
+
+<footer>
+<hr>
+<p>&copy; 2024 Мой учебный сайт</p>
+</footer>
+</body>
+</html>
